@@ -1,9 +1,13 @@
 import React from 'react';
+import Container from './modules/container';
+import Header from './modules/header';
 
 function App() {
-  return (
-    <div>Чистая аппка</div>
-  );
+    return (
+        <Container>
+            <Header />
+        </Container>
+    );
 }
 
 export default App;

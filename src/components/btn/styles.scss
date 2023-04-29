@@ -1,0 +1,96 @@
+@import '../../helpers.scss';
+@import '../../variables.scss';
+
+.btn {
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
+
+    &--accent {
+        // TODO
+        // Не добавила шрифт 'GT Walsheim Pro' для кнопки
+        // Уточнила бы у дизайнера, точно ли нужен отдельный шрифт для этой кнопки.
+        // Сделала font-weight 600, чтобы визуально было похоже на макет
+        position: relative;
+        padding: 20px 30px;
+        background: $gradient;
+        box-shadow: $shadow;
+        border: none;
+        border-radius: $radius;
+        color: $color-main;
+        @include font($fs-btn, 600, $lh-btn);
+        transition: 0.3s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: $gradient;
+            border-radius: $radius;
+            filter: blur(8px);
+            transition: 0.3s;
+        }
+
+        &:hover {
+            &::before {
+                filter: blur(19.5px);
+            }
+        }
+
+        &:active {
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        &:disabled {
+            color: rgba($color-text-dark, 0.5);
+            pointer-events: none;
+
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+
+    &--outline {
+        padding: 16px 22px;
+        background-color: transparent;
+        border: 1px solid $color-white;
+        border-radius: 15px;
+        color: $color-white;
+        @include font($fs-btn-outline, 500, $lh-btn-outline);
+        transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+
+        &:hover,
+        &:active {
+            border-color: $color-accent;
+            color: $color-accent;
+        }
+
+        &:active {
+            background-color: rgba(224, 255, 172, 0.05);
+            backdrop-filter: blur(7.5px);
+        }
+
+        &:disabled {
+            pointer-events: none;
+        }
+    }
+}
+
+// TODO
+/* 
+Кнопка форма
+font-weight: 500;
+font-size: 18px;
+line-height: 1.22;
+
+    @include font($fs-btn-form, 500, $lh-btn-form);
+*/

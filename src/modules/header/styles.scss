@@ -1,0 +1,10 @@
+@import '/src/helpers.scss';
+@import '/src/variables.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding: 2px 0;
+}

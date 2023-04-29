@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 105px;
+
+        &-link {
+            color: $color-text-light;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__btn {
+        margin-left: 150px;
+    }
+}

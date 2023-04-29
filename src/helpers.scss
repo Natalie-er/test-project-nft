@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+@mixin font($fs: $fs-default, $fw: 400, $lh: $lh-default) {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+}

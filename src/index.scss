@@ -1,0 +1,75 @@
+@import './variables.scss';
+@import './helpers.scss';
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $color-main;
+    @include font();
+    color: $color-white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+        color: $color-text-light;
+    }
+
+    &:not([class]) {
+        text-decoration: underline;
+    }
+}
+
+h1,
+.text-h1 {
+    @include font($fs-h1, 700, $lh-h1);
+    letter-spacing: -0.03em;
+}
+
+h2,
+.text-h2 {
+    @include font($fs-h2, 600, $lh-h2);
+}
+
+h3,
+.text-h3 {
+    @include font($fs-h3, 700, $lh-h3);
+    letter-spacing: -0.03em;
+}
+
+h4,
+.text-h4 {
+    @include font($fs-h4, 400, $lh-h4);
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// TODO
+/*
+Текст форма
+font-weight: 400;
+font-size: 21px;
+line-height: 1.2;
+
+Текст в карточках
+font-weight: 400;
+font-size: 19px;
+line-height: 1.32;
+letter-spacing: -0.7px;
+
+Инпут
+font-weight: 400;
+font-size: 18px;
+line-height: 1.22;
+*/
