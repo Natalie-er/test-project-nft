@@ -1,12 +1,13 @@
 import React from 'react';
-import Container from './modules/container';
 import Header from './modules/header';
+import MainPage from './pages/main';
 
 function App() {
     return (
-        <Container>
+        <>
             <Header />
-        </Container>
+            <MainPage />
+        </>
     );
 }
 

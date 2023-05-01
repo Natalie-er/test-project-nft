@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.section {
+    $section-pt: 195px;
+    display: flex;
+    padding: $section-pt 0;
+
+    &--top {
+        padding-top: $section-pt + $header-height;
+    }
+
+    &--full-height {
+        min-height: 100vh;
+    }
+
+    &--light {
+        background-color: $color-white;
+    }
+}

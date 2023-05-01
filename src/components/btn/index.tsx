@@ -13,7 +13,7 @@ type BtnProps = {
 const Btn = ({
     text,
     classes,
-    mode = 'outline',
+    mode = 'accent',
     type = 'button',
     disabled = false,
 }: BtnProps) => {

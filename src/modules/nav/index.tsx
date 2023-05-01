@@ -27,7 +27,7 @@ const Nav = () => {
                 ))}
             </ul>
             {/* TODO Открывать модалку */}
-            <Btn text="Личный кабинет" classes="nav__btn" />
+            <Btn text="Личный кабинет" classes="nav__btn" mode="outline" />
         </nav>
     );
 };

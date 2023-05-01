@@ -1,9 +1,12 @@
 @import './variables.scss';
 @import './helpers.scss';
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    box-sizing: border-box;
     background-color: $color-main;
     @include font();
     color: $color-white;
@@ -25,6 +28,7 @@ a {
 
 h1,
 .text-h1 {
+    margin: 0 0 20px 0;
     @include font($fs-h1, 700, $lh-h1);
     letter-spacing: -0.03em;
 }
@@ -49,10 +53,18 @@ h4,
     font-weight: 400;
 }
 
+.fw-700 {
+    font-weight: 700;
+}
+
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+p {
+    margin: 0 0 15px 0;
 }
 
 // TODO

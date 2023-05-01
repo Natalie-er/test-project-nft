@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &__text {
+        max-width: 56%;
+    }
+
+    &__content {
+        max-width: 500px;
+        margin-bottom: 67px;
+        color: $color-text-light;
+    }
+
+    &__picture {
+        position: absolute;
+        top: 50%;
+        right: -44px;
+        transform: translateY(-50%);
+    }
+}
