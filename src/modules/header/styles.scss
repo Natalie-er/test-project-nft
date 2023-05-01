@@ -8,10 +8,25 @@
     right: 0;
 
     &__inner {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-top: 30px;
         padding: 2px 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 415px;
+            height: 415px;
+            left: -300px;
+            top: 50%;
+            border-radius: 50%;
+            background: $gradient2;
+            filter: blur(86px);
+            transform: rotate(12deg) translateY(-50%);
+            z-index: -1;
+        }
     }
 }

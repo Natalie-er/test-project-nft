@@ -21,5 +21,18 @@
         top: 50%;
         right: -44px;
         transform: translateY(-50%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 88px;
+            height: 88px;
+            left: -26%;
+            top: 13%;
+            border-radius: 50%;
+            background: $gradient3;
+            filter: blur(2px);
+            transform: rotate(-25deg);
+        }
     }
 }
