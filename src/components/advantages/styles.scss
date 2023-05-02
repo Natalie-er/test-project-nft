@@ -1,0 +1,40 @@
+@import '../../variables.scss';
+@import '../../helpers.scss';
+
+.advantages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    &__item {
+        position: relative;
+        width: 300px;
+        background-color: rgba(51, 62, 81, 0.7);
+        border-radius: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        @include font($fs-card, 400, $lh-card);
+        letter-spacing: -0.7px;
+        z-index: 1;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: 20px;
+            z-index: -1;
+            background: rgba(51, 62, 81, 0.6);
+            border-radius: 0 0 20px 20px;
+        }
+
+        &-inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 45px 20px 50px 20px;
+        }
+    }
+}

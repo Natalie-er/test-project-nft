@@ -1,0 +1,34 @@
+@import '../../variables.scss';
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+
+    &_1 {
+        width: 152px;
+        height: 152px;
+        right: 9%;
+        top: -85px;
+        background: $gradient4;
+        transform: rotate(-26deg);
+    }
+
+    &_2 {
+        width: 84px;
+        height: 84px;
+        left: 14%;
+        top: 120px;
+        background: $gradient5;
+        transform: rotate(8deg);
+    }
+
+    &_3 {
+        width: 132px;
+        height: 132px;
+        right: 12%;
+        bottom: 140px;
+        background: $gradient4;
+        filter: blur(12px);
+        transform: rotate(-26deg);
+    }
+}

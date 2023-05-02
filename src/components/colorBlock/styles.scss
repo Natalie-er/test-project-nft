@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.color-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 130px;
+    background: $gradient6;
+    border-radius: 20px;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 440px;
+        height: 440px;
+        background: $gradient2;
+        border-radius: 50%;
+        filter: blur(86px);
+        transform: rotate(12deg);
+        z-index: -1;
+    }
+
+    &::before {
+        top: -8%;
+        right: 0;
+    }
+    &::after {
+        left: 1%;
+        bottom: 3%;
+    }
+}

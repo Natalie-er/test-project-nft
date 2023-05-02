@@ -1,8 +1,13 @@
 import React from 'react';
-// import './styles.scss'; // TODO
+import advantagesData from './advantagesData';
+
 import Container from '../../components/container';
 import Section from '../../components/section';
 import Banner from '../../components/banner';
+import Circle from '../../components/circle';
+import ColorBlock from '../../components/colorBlock';
+import Advantages from '../../components/advantages';
+
 import img from '../../images/main-1.png';
 import img2x from '../../images/main-1_2x.png';
 
@@ -40,7 +45,14 @@ const Main = () => {
             </Section>
             <Section mode="light">
                 <Container>
-                    <div>Что даст тебе обучение?</div>
+                    <ColorBlock>
+                        <Circle modName="1" />
+                        <Circle modName="2" />
+                        <Circle modName="3" />
+
+                        <h2>Что даст тебе обучение?</h2>
+                        <Advantages list={advantagesData} />
+                    </ColorBlock>
                 </Container>
             </Section>
         </>

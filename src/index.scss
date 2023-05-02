@@ -35,6 +35,7 @@ h1,
 
 h2,
 .text-h2 {
+    margin: 0 0 65px 0;
     @include font($fs-h2, 600, $lh-h2);
 }
 
@@ -73,12 +74,6 @@ p {
 font-weight: 400;
 font-size: 21px;
 line-height: 1.2;
-
-Текст в карточках
-font-weight: 400;
-font-size: 19px;
-line-height: 1.32;
-letter-spacing: -0.7px;
 
 Инпут
 font-weight: 400;

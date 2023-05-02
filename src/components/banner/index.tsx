@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import './styles.scss';
 import Btn from '../../components/btn';
+import Picture from '../../components/picture';
 
 type BannerImage = {
     src: string;
@@ -24,10 +25,7 @@ const Banner = ({ title, btnText, children, image }: BannerProps) => {
                     <div className="banner__content">{children}</div>
                     <Btn text={btnText} />
                 </div>
-                <picture className="banner__picture">
-                    <source srcSet={`${image.src}, ${image.src2x} 2x`} />
-                    <img src={image.src} alt={image.alt} />
-                </picture>
+                <Picture {...image} classes="banner__picture" />
             </div>
         </div>
     );
