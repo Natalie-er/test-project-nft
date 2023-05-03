@@ -11,6 +11,13 @@
         top: -85px;
         background: $gradient4;
         transform: rotate(-26deg);
+
+        @media screen and (max-width: ($laptop - 1)) {
+            top: -50px;
+            right: -30px;
+            width: 88px;
+            height: 88px;
+        }
     }
 
     &_2 {
@@ -20,6 +27,25 @@
         top: 120px;
         background: $gradient5;
         transform: rotate(8deg);
+
+        @media screen and (max-width: ($laptop - 1)) {
+            top: 180px;
+            width: 22px;
+            height: 22px;
+        }
+
+        @media screen and (max-width: ($tablet - 1)) {
+            top: 65px;
+            left: 6%;
+        }
+
+        @media screen and (max-width: ($tablet-small - 1)) {
+            top: 75px;
+        }
+
+        @media screen and (max-width: ($mobile - 1)) {
+            top: 100px;
+        }
     }
 
     &_3 {
@@ -30,5 +56,17 @@
         background: $gradient4;
         filter: blur(12px);
         transform: rotate(-26deg);
+
+        @media screen and (max-width: ($laptop - 1)) {
+            right: 6%;
+            bottom: 80px;
+            width: 63px;
+            height: 63px;
+        }
+
+        @media screen and (max-width: ($tablet - 1)) {
+            right: 20px;
+            bottom: 20px;
+        }
     }
 }

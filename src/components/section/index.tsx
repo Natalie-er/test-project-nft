@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import createClass from 'classnames';
 import './styles.scss';
 
-type SectionMode = 'dark' | 'light' | 'full-height' | 'top';
+type SectionMode = 'dark' | 'light' | 'full-height' | 'top' | 'last';
 
 type SectionProps = {
     children: ReactNode;

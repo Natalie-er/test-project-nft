@@ -6,14 +6,53 @@
     align-items: center;
     height: 100%;
 
-    &__text {
-        max-width: 56%;
+    @media screen and (max-width: ($laptop - 1)) {
+        justify-content: center;
+    }
+
+    &__inner {
+        max-width: 58%;
+        width: 100%;
+
+        @media screen and (max-width: ($laptop - 1)) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: ($tablet - 1)) {
+            max-width: 500px;
+        }
+    }
+
+    &__title {
+        @media screen and (max-width: ($tablet - 1)) {
+            max-width: 340px;
+        }
+
+        @media screen and (max-width: ($tablet-small - 1)) {
+            max-width: 250px;
+        }
     }
 
     &__content {
         max-width: 500px;
         margin-bottom: 67px;
         color: $color-text-light;
+
+        @media screen and (max-width: ($laptop - 1)) {
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: ($tablet - 1)) {
+            max-width: 360px;
+        }
+
+        @media screen and (max-width: ($tablet-small - 1)) {
+            max-width: 240px;
+        }
     }
 
     &__picture {
@@ -21,6 +60,26 @@
         top: 50%;
         right: -44px;
         transform: translateY(-50%);
+        width: 678px;
+        display: block;
+
+        @media screen and (max-width: ($desktop - 1)) {
+            right: -20px;
+            max-width: 600px;
+        }
+
+        @media screen and (max-width: ($laptop - 1)) {
+            position: initial;
+            top: initial;
+            right: initial;
+            transform: initial;
+            max-width: 678px;
+            margin-bottom: 11px;
+        }
+
+        @media screen and (max-width: ($tablet - 1)) {
+            max-width: 100%;
+        }
 
         &::before {
             content: '';
@@ -33,6 +92,14 @@
             background: $gradient3;
             filter: blur(2px);
             transform: rotate(-25deg);
+
+            @media screen and (max-width: ($desktop - 1)) {
+                top: 3%;
+            }
+
+            @media screen and (max-width: ($laptop - 1)) {
+                display: none;
+            }
         }
     }
 }

@@ -15,6 +15,10 @@
         margin-top: 30px;
         padding: 2px 0;
 
+        @media screen and (max-width: ($tablet - 1)) {
+            margin-top: 20px;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -27,6 +31,18 @@
             filter: blur(86px);
             transform: rotate(12deg) translateY(-50%);
             z-index: -1;
+
+            @media screen and (max-width: ($tablet - 1)) {
+                left: -130px;
+                width: 238px;
+                height: 238px;
+            }
+        }
+    }
+
+    &__logo {
+        @media screen and (max-width: ($tablet - 1)) {
+            max-width: 89px;
         }
     }
 }

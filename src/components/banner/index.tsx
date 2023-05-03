@@ -1,31 +1,24 @@
 import React, { ReactNode } from 'react';
 import './styles.scss';
 import Btn from '../../components/btn';
-import Picture from '../../components/picture';
-
-type BannerImage = {
-    src: string;
-    src2x: string;
-    alt?: string;
-};
+import Picture, { type PictureProps } from '../../components/picture';
 
 type BannerProps = {
     title: string | ReactNode;
     btnText: string;
     children: ReactNode;
-    image: BannerImage;
+    image: PictureProps;
 };
 
 const Banner = ({ title, btnText, children, image }: BannerProps) => {
     return (
         <div className="banner">
             <div className="banner__inner">
-                <div className="banner__text">
-                    <h1 className="fw-400">{title}</h1>
-                    <div className="banner__content">{children}</div>
-                    <Btn text={btnText} />
-                </div>
+                <h1 className="banner__title fw-400">{title}</h1>
                 <Picture {...image} classes="banner__picture" />
+                <div className="banner__content">{children}</div>
+                {/* TODO form */}
+                <Btn text={btnText} />
             </div>
         </div>
     );

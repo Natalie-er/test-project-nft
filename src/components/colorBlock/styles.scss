@@ -12,6 +12,15 @@
     border-radius: 20px;
     z-index: 1;
 
+    @media screen and (max-width: ($laptop - 1)) {
+        width: calc(100% + var(--container-offset) * 2);
+        margin-left: calc(-1 * var(--container-offset));
+    }
+
+    @media screen and (max-width: ($tablet - 1)) {
+        padding: 40px 30px 102px;
+    }
+
     &::before,
     &::after {
         content: '';
@@ -28,9 +37,21 @@
     &::before {
         top: -8%;
         right: 0;
+
+        @media screen and (max-width: ($laptop - 1)) {
+            top: -70px;
+            width: 138px;
+            height: 138px;
+            filter: blur(86px);
+        }
     }
+
     &::after {
         left: 1%;
         bottom: 3%;
+
+        @media screen and (max-width: ($laptop - 1)) {
+            display: none;
+        }
     }
 }

@@ -43,14 +43,14 @@ const Main = () => {
                     </Banner>
                 </Container>
             </Section>
-            <Section mode="light">
+            <Section mode={['light', 'last']}>
                 <Container>
                     <ColorBlock>
                         <Circle modName="1" />
                         <Circle modName="2" />
                         <Circle modName="3" />
 
-                        <h2>Что даст тебе обучение?</h2>
+                        <h2 className="text-center">Что даст тебе обучение?</h2>
                         <Advantages list={advantagesData} />
                     </ColorBlock>
                 </Container>

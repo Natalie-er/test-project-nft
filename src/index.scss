@@ -1,6 +1,58 @@
 @import './variables.scss';
 @import './helpers.scss';
 
+:root {
+    // sizes
+    --header-height: 90px; // TODO
+    --container: 1280px;
+    --container-offset: 16px;
+
+    // font
+    --fs-default: 23px;
+    --fw-default: 400;
+    --lh-default: 1.2;
+    --fs-h1: 72px;
+    --fw-h1: 700;
+    --lh-h1: 1.05;
+    --fs-h2: 45px;
+    --fw-h2: 600;
+    --lh-h2: 1.3;
+    --fs-h3: 45px;
+    --fw-h3: 700;
+    --lh-h3: 1.05;
+    --fs-h4: 23px;
+    --fw-h4: 400;
+    --lh-h4: 1.2;
+
+    --fs-btn: 20px;
+    --fw-btn: 600;
+    --lh-btn: 1.3;
+    --fs-btn-outline: 16px;
+    --fw-btn-outline: 500;
+    --lh-btn-outline: 1.18;
+    --fs-btn-form: 18px;
+    --fw-btn-form: 500;
+    --lh-btn-form: 1.22;
+
+    --fs-card: 19px;
+    --fw-card: 400;
+    --lh-card: 1.32;
+
+    @media screen and (max-width: ($tablet - 1)) {
+        --header-height: 63px; // TODO
+
+        --fs-default: 18px;
+        --fs-h1: 25px;
+        --fs-h2: 23px;
+
+        // TODO Размер по макету 16px, но т.к. там другой шрифт, надпись не вмещается в кнопку. Согласовать с дизом
+        --fs-btn: 15px;
+
+        --fs-card: 16px;
+        --lh-card: 1.56;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -29,25 +81,33 @@ a {
 h1,
 .text-h1 {
     margin: 0 0 20px 0;
-    @include font($fs-h1, 700, $lh-h1);
+    @include font('h1');
     letter-spacing: -0.03em;
+
+    @media screen and (max-width: ($tablet - 1)) {
+        margin-bottom: 16px;
+    }
 }
 
 h2,
 .text-h2 {
     margin: 0 0 65px 0;
-    @include font($fs-h2, 600, $lh-h2);
+    @include font('h2');
+
+    @media screen and (max-width: ($tablet - 1)) {
+        margin-bottom: 30px;
+    }
 }
 
 h3,
 .text-h3 {
-    @include font($fs-h3, 700, $lh-h3);
+    @include font('h3');
     letter-spacing: -0.03em;
 }
 
 h4,
 .text-h4 {
-    @include font($fs-h4, 400, $lh-h4);
+    @include font('h4');
 }
 
 .fw-400 {
@@ -58,6 +118,10 @@ h4,
     font-weight: 700;
 }
 
+.text-center {
+    text-align: center;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -65,7 +129,7 @@ ul {
 }
 
 p {
-    margin: 0 0 15px 0;
+    margin: 0;
 }
 
 // TODO

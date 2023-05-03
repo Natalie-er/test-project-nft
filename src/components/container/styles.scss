@@ -1,8 +1,8 @@
 @import '/src/variables.scss';
 
 .container {
-    max-width: $container + $container-offset * 2;
+    max-width: calc(var(--container) + var(--container-offset) * 2);
     width: 100%;
     margin: 0 auto;
-    padding: 0 $container-offset;
+    padding: 0 var(--container-offset);
 }

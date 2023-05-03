@@ -2,28 +2,45 @@
 @import '../../helpers.scss';
 
 .advantages {
+    --gap: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: var(--gap);
+    max-width: calc(600px + var(--gap));
+
+    @media screen and (max-width: ($tablet - 1)) {
+        --gap: 35px;
+    }
+
+    @media screen and (max-width: ($tablet-small - 1)) {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
 
     &__item {
+        // TODO порядок элементов в мобильной версии странно меняется.
+        // Уточнила бы у дизайнера и, если необходимо, установила бы элементам свойство order
+        --bottom-height: 20px;
         position: relative;
-        width: 300px;
         background-color: rgba(51, 62, 81, 0.7);
         border-radius: 20px;
-        margin-bottom: 20px;
+        margin-bottom: var(--bottom-height);
         text-align: center;
-        @include font($fs-card, 400, $lh-card);
+        @include font('card');
         letter-spacing: -0.7px;
         z-index: 1;
+
+        @media screen and (max-width: ($tablet-small - 1)) {
+            --bottom-height: 17px;
+        }
 
         &::after {
             content: '';
             position: absolute;
-            bottom: -20px;
+            bottom: calc(-1 * var(--bottom-height));
             left: 20px;
             width: calc(100% - 40px);
-            height: 20px;
+            height: var(--bottom-height);
             z-index: -1;
             background: rgba(51, 62, 81, 0.6);
             border-radius: 0 0 20px 20px;
@@ -34,7 +51,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 45px 20px 50px 20px;
+            padding: 45px 22px 50px;
+        }
+    }
+
+    &__image {
+        @media screen and (max-width: ($tablet - 1)) {
+            max-width: 114px;
         }
     }
 }

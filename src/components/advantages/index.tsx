@@ -17,7 +17,7 @@ const Advantages = ({ list }: AdvantagesProps) => {
             {list.map(({ text, image }) => (
                 <li className="advantages__item">
                     <div className="advantages__item-inner">
-                        <Picture {...image} />
+                        <Picture {...image} classes="advantages__image" />
                         <p>{text}</p>
                     </div>
                 </li>

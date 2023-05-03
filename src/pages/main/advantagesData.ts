@@ -33,7 +33,7 @@ const advantagesData = [
         },
     },
     {
-        text: 'Узнаешь кто такие холдеры и флипперы',
+        text: 'Узнаешь, кто такие холдеры и флипперы',
         image: {
             src: img4,
             src2x: img4_2x,
