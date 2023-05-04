@@ -9,6 +9,7 @@ import img4_2x from '../../images/advantages-4_2x.png';
 
 const advantagesData = [
     {
+        id: '0',
         text: 'Откроешь свой первый криптокошелек и научишься с ним работать',
         image: {
             src: img1,
@@ -17,6 +18,7 @@ const advantagesData = [
         },
     },
     {
+        id: '1',
         text: 'Поймёшь, как выбирать правильные дропы',
         image: {
             src: img2,
@@ -25,6 +27,7 @@ const advantagesData = [
         },
     },
     {
+        id: '2',
         text: 'Построишь план по быстрому приумножению заработанных средств',
         image: {
             src: img3,
@@ -33,6 +36,7 @@ const advantagesData = [
         },
     },
     {
+        id: '3',
         text: 'Узнаешь, кто такие холдеры и флипперы',
         image: {
             src: img4,

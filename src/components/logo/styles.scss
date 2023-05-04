@@ -1,0 +1,7 @@
+@import '../../variables.scss';
+
+.logo {
+    @media screen and (max-width: ($laptop - 1)) {
+        max-width: 89px;
+    }
+}

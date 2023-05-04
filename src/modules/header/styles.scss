@@ -8,15 +8,20 @@
     right: 0;
 
     &__inner {
+        --header-top-offset: 30px;
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 30px;
+        margin-top: var(--header-top-offset);
         padding: 2px 0;
 
+        @media screen and (max-width: ($laptop - 1)) {
+            padding: 0;
+        }
+
         @media screen and (max-width: ($tablet - 1)) {
-            margin-top: 20px;
+            --header-top-offset: 20px;
         }
 
         &::before {
@@ -37,12 +42,6 @@
                 width: 238px;
                 height: 238px;
             }
-        }
-    }
-
-    &__logo {
-        @media screen and (max-width: ($tablet - 1)) {
-            max-width: 89px;
         }
     }
 }
