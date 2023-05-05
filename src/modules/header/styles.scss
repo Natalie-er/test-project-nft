@@ -45,3 +45,7 @@
         }
     }
 }
+
+.overlay-visible .header {
+    right: var(--scroll-width, 0);
+}

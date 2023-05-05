@@ -8,7 +8,7 @@ type BtnProps = {
     mode?: 'accent' | 'outline';
     type?: 'button' | 'submit';
     disabled?: boolean;
-    onClick?: () => void;
+    onClickCallback?: () => void;
 };
 
 const Btn = ({
@@ -17,7 +17,7 @@ const Btn = ({
     mode = 'accent',
     type = 'button',
     disabled = false,
-    onClick,
+    onClickCallback,
 }: BtnProps) => {
     const classList = cleateClass('btn', `btn--${mode}`, classes);
 
@@ -26,7 +26,7 @@ const Btn = ({
             type={type}
             className={classList}
             disabled={disabled}
-            onClick={onClick}
+            onClick={onClickCallback}
         >
             {text}
         </button>
