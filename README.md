@@ -1,3 +1,10 @@
+# Тестовое задание NFT project
+
+[Демо](https://elegant-otter-51882b.netlify.app/)
+
+Задание:
+Сверстать макет из двух блоков с адаптивом до 320px, использовать React, BEM, препроцессоры.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
